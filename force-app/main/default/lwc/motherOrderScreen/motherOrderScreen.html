@@ -10,9 +10,11 @@
     {userId}
     {userName}
     {returnName}
-    <c-product-info
-      userid={userId}
-      username={userName}
-      oneventoexemplo={handleEventoExemplo}>
+    <template lwc:if={showSon}>
+      <c-product-info
+        id={userId}
+        name={userName}
+        oneventoexemplo={handleEventoExemplo}>
     </c-product-info>
+    </template>
 </template>

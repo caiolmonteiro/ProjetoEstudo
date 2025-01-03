@@ -2,10 +2,13 @@ import { api, LightningElement } from 'lwc';
 
 export default class ProductInfo extends LightningElement {
 
-    @api userId;
-    @api userName;
+    @api id;
+    @api name;
 
     connectedCallback(){
+
+        this.name = 'NELSOOON';
+
         let eventParams = {
             exemplo : 'testeeee'
         };
