@@ -5,6 +5,7 @@ export default class MotherOrderScreen extends LightningElement {
 
     @api userId;
     @api userName;
+    showMother = true;
     showSon = false;
     returnName;
 
@@ -12,12 +13,16 @@ export default class MotherOrderScreen extends LightningElement {
         getCurrentUserInfo().then(result => {
             this.userId = result.Id;
             this.userName = result.Name;
-            this.showSon = true;
         });
     }
 
     handleEventoExemplo(event){
         this.returnName = event.detail.exemplo;
+    }
+
+    showProductInfo(){
+        this.showSon = !this.showSon;
+        this.showMother = !this.showMother;
     }
 
 }

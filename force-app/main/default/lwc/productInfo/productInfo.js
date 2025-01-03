@@ -7,10 +7,13 @@ export default class ProductInfo extends LightningElement {
 
     connectedCallback(){
 
+        console.log(this.name)
+
         this.name = 'NELSOOON';
 
         let eventParams = {
-            exemplo : 'testeeee'
+            exemplo : 'testeeee',
+            parametro2 : 'teste'
         };
 
         let eventoExemplo = new CustomEvent('eventoexemplo', {

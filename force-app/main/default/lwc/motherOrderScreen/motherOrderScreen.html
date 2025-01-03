@@ -2,19 +2,24 @@
   @description       : HTML of the motherOrderScreen
   @author            : Caio Leão Monteiro
   @group             : 
-  @last modified on  : 01-02-2025
+  @last modified on  : 01-03-2025
   @last modified by  : Caio Leão Monteiro
 -->
 <template>
-    aaaaaaaaaaaaaa
-    {userId}
-    {userName}
-    {returnName}
-    <template lwc:if={showSon}>
-      <c-product-info
-        id={userId}
-        name={userName}
-        oneventoexemplo={handleEventoExemplo}>
-    </c-product-info>
-    </template>
+    <lightning-button label="Mudar Página" onclick={showProductInfo}></lightning-button>
+    <div>
+      <template lwc:if={showMother}>
+        aaaaaaaaaaaaaa
+        {userId}
+        {userName}
+        {returnName}
+      </template>
+      <template lwc:if={showSon}>
+        <c-product-info
+          id={userId}
+          name={userName}
+          oneventoexemplo={handleEventoExemplo}>
+      </c-product-info>
+      </template>
+    </div>
 </template>
