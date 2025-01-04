@@ -1,12 +1,14 @@
 import { api, LightningElement } from 'lwc';
+import LogoGreenByte from "@salesforce/resourceUrl/LogoGreenByte";
 
 export default class ProductInfo extends LightningElement {
 
     @api id;
     @api name;
+    exemplo = LogoGreenByte;
 
     connectedCallback(){
-
+        
         console.log(this.name)
 
         this.name = 'NELSOOON';
